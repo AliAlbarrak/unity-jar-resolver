@@ -1,9 +1,8 @@
 fileFormatVersion: 2
-guid: 40f2762fc9644c2baa740ca0898459ef
+guid: 07e1a955b2904f8dbed436a7b3deb8f6
 labels:
 - gvh_version-1.2.178-preview
-- gvh_version-1.2.178-preview
-- gvhp_exportpath-ExternalDependencyManager/Editor/Google.VersionHandler.dll
+- gvhp_exportpath-ExternalDependencyManager/Editor/1.2.178-preview/Google.VersionHandlerImpl.dll
 - gvh
 - gvhp_targets-editor
 PluginImporter:
@@ -22,7 +21,7 @@ PluginImporter:
   - first:
       Editor: Editor
     second:
-      enabled: 1
+      enabled: 0
       settings:
         DefaultValueInitialized: true
   - first:
