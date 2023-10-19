@@ -818,26 +818,29 @@ namespace Google {
                     return;
                 }
                 try {
-                    using (var writer =
-                           XmlWriter.Create(PROJECT_SETTINGS_FILE,
-                                            new XmlWriterSettings {
-                                                Encoding = new UTF8Encoding(false),
-                                                Indent = true,
-                                                IndentChars = "  ",
-                                                NewLineChars = "\n",
-                                                NewLineHandling = NewLineHandling.Replace
-                                            })) {
-                        writer.WriteStartElement("projectSettings");
-                        foreach (var key in projectSettings.Keys) {
-                            var value = projectSettings.GetString(key);
-                            writer.WriteStartElement("projectSetting");
-                            if (!String.IsNullOrEmpty(key) && !String.IsNullOrEmpty(value)) {
-                                writer.WriteAttributeString("name", key);
-                                writer.WriteAttributeString("value", value);
+                    using (FileStream fileStream = File.Create(PROJECT_SETTINGS_FILE))
+                    {
+                        using (var writer =
+                               XmlWriter.Create(fileStream,
+                                                new XmlWriterSettings {
+                                                    Encoding = new UTF8Encoding(false),
+                                                    Indent = true,
+                                                    IndentChars = "  ",
+                                                    NewLineChars = "\n",
+                                                    NewLineHandling = NewLineHandling.Replace
+                                                })) {
+                            writer.WriteStartElement("projectSettings");
+                            foreach (var key in projectSettings.Keys) {
+                                var value = projectSettings.GetString(key);
+                                writer.WriteStartElement("projectSetting");
+                                if (!String.IsNullOrEmpty(key) && !String.IsNullOrEmpty(value)) {
+                                    writer.WriteAttributeString("name", key);
+                                    writer.WriteAttributeString("value", value);
+                                }
+                                writer.WriteEndElement();
                             }
                             writer.WriteEndElement();
                         }
-                        writer.WriteEndElement();
                     }
                 } catch (Exception exception) {
                     if (exception is IOException || exception is UnauthorizedAccessException) {
