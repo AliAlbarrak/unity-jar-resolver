@@ -1,6 +1,7 @@
 fileFormatVersion: 2
-guid: 0ef15b88d61549d3b56b90b354ce054d
+guid: 402f988dbbad4e14944448ade380c736
 labels:
+- gvh_version-1.2.178
 - gvh_version-1.2.178-preview
 - gvh_version-1.2.178-preview
 - gvhp_exportpath-ExternalDependencyManager/Editor/CHANGELOG.md

@@ -1,6 +1,7 @@
 fileFormatVersion: 2
-guid: 40f2762fc9644c2baa740ca0898459ef
+guid: 37ef84fb9d014ba5b4942269a6117c58
 labels:
+- gvh_version-1.2.178
 - gvh_version-1.2.178-preview
 - gvh_version-1.2.178-preview
 - gvhp_exportpath-ExternalDependencyManager/Editor/Google.VersionHandler.dll

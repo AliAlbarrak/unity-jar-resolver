@@ -1,6 +1,7 @@
 fileFormatVersion: 2
-guid: 9b16d19f7aab4579a2939720d09afcca
+guid: 227b6adf707f4ac994eea623e1f5b928
 labels:
+- gvh_version-1.2.178
 - gvh_version-1.2.178-preview
 - gvh_version-1.2.178-preview
 - gvhp_exportpath-ExternalDependencyManager/Editor/Google.VersionHandler.pdb
