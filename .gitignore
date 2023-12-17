@@ -27,3 +27,5 @@
 .DS_Store
 
 external_tools/
+
+.idea/
